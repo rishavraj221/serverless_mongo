@@ -2,6 +2,7 @@ import { MongoClient } from "mongodb";
 import "dotenv/config";
 
 import translations from "./collections/translations.mjs";
+import posts from "./collections/posts.mjs";
 import constants from "./helpers/constants.mjs";
 
 const mongo_username = process.env.MONGODB_SERVERLESS_USERNAME;
@@ -21,6 +22,7 @@ const returnResponse = (result, statusCode = 200) => {
 
 const functionMapper = {
   [Collections.TRANSLATIONS]: translations,
+  [Collections.POSTS]: posts,
 };
 
 export const handler = async (event, context) => {

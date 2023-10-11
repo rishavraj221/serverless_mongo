@@ -13,5 +13,6 @@ export default Object.freeze({
   ACTION_NOT_FOUND: "Action not found",
   MONGO_COLLECTIONS: {
     TRANSLATIONS: "translations",
+    POSTS: "posts",
   },
 });
